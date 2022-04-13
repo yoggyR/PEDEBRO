@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="paspos.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.49071404"
+     inkscape:cx="-416.73966"
+     inkscape:cy="754.00329"
+     inkscape:window-width="1920"
+     inkscape:window-height="1046"
+     inkscape:window-x="-11"
+     inkscape:window-y="1069"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1839">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1835" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop1837" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1839"
+       id="linearGradient1841"
+       x1="101.63548"
+       y1="119.69802"
+       x2="93.008598"
+       y2="119.69802"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-161.2149,3.2350817)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:6.04552;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+       id="path2119"
+       cx="104.33138"
+       cy="136.14301"
+       r="62.095837"
+       inkscape:export-filename="C:\Users\asus\Desktop\DATA\PS\PS 4\DEPAN\paspos-career\public\img\paspos.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g2203"
+       transform="matrix(0.51906317,0,0,0.51906317,130.70901,60.500959)"
+       inkscape:export-filename="C:\Users\asus\Desktop\DATA\PS\PS 4\DEPAN\paspos-career\public\img\paspos.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:url(#linearGradient1841);fill-opacity:1;stroke:#000000;stroke-width:11.5593;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+         id="rect1721"
+         width="87.616791"
+         height="87.616791"
+         x="-94.626144"
+         y="71.710976"
+         rx="0"
+         ry="0" />
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:11.6947;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         id="rect1993"
+         width="41.17012"
+         height="59.502247"
+         x="-93.778793"
+         y="160.17511"
+         rx="6.4922066"
+         ry="6.4922061" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+.actived {
+    font-weight: bold;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .nav-link {
+        margin-right: 30px;
+    }
+
+    .actived:after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid black;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+}
