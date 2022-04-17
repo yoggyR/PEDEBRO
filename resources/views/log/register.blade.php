@@ -40,7 +40,8 @@
                         </div>
                     </div>
                 </div>
-                <a class="w-100 btn btn-lg btn-outline-dark mt-3" type="button" href="/job">Sign up</a>
+                <a class="w-100 btn btn-lg btn-outline-dark mt-3" type="button" href="" data-bs-toggle="modal"
+                data-bs-target="#verification">Sign up</a>
                 <label class="mt-2">Already have an account? <a href="" data-bs-toggle="modal"
                         data-bs-target="#signIn" style="text-decoration: none;">Sign in</a></label>
             </div>
@@ -50,3 +51,4 @@
         </div>
     </div>
 </div>
+@include('log.emailVerification')

@@ -1,6 +1,11 @@
 .actived {
     font-weight: bold;
 }
+.activedUser{
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 
 /* Desktop */
 @media (min-width: 992px) {

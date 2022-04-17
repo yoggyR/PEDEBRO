@@ -14,17 +14,32 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.home', [
+    return view('frontPages.home', [
         "title" => "home"
     ]);
 });
 Route::get('/job', function () {
-    return view('pages.jobVacancies', [
+    return view('frontPages.jobVacancies', [
         "title" => "job"
     ]);
 });
 Route::get('/about', function () {
-    return view('pages.aboutUs', [
+    return view('frontPages.aboutUs', [
         "title" => "about"
+    ]);
+});
+Route::get('/myProfile', function () {
+    return view('frontPages.myProfile', [
+        "title" => "myProfile"
+    ]);
+});
+Route::get('/applicationHistory', function () {
+    return view('frontPages.applicationHistory', [
+        "title" => "applicationHistory"
+    ]);
+});
+Route::get('/changePassword', function () {
+    return view('frontPages.changePassword', [
+        "title" => "changePassword"
     ]);
 });
