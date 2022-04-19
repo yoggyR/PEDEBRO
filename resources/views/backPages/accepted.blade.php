@@ -57,9 +57,8 @@
                                     <td>10-03-2022</td>
                                     <td>
                                         <div class="btn-group btn-group-sm ">
-                                            <a href="/" class="btn btn-outline-secondary " title="Details"><i
-                                                    class="bi bi-eye-fill"></i></a>
-                                            <a href="#" class="btn btn-outline-secondary" title="Contact"><i class="bi bi-envelope-fill"></i></a>
+                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#dApplicant" title="Details"><i class="bi bi-file-earmark-text-fill"></i></a>
+                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#contact" title="Contact"><i class="bi bi-envelope-fill"></i></a>
                                             <a href="#" class="btn btn-outline-secondary" title="Reject"><i
                                                     class="bi bi-x-circle-fill"></i></a>
                                         </div>
@@ -107,6 +106,7 @@
                                     <th>Applicant name</th>
                                     <th>Job name</th>
                                     <th>Apply date</th>
+                                    <th>Contact date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -116,10 +116,10 @@
                                     <td>Yoggy Rachmawan</td>
                                     <td>IT Support</td>
                                     <td>10-03-2022</td>
+                                    <td>15-03-2022</td>
                                     <td>
                                         <div class="btn-group btn-group-sm ">
-                                            <a href="/" class="btn btn-outline-secondary " title="Details"><i
-                                                    class="bi bi-eye-fill"></i></a>
+                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#dApplicant" title="Details"><i class="bi bi-file-earmark-text-fill"></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -143,4 +143,6 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+    @include('backPages.contact')
+    @include('backPages.detailsApplicant')
 @endsection

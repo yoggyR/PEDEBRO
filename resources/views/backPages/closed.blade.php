@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Job Vacancies</h1>
+                        <h1 class="m-0">Job vacancies</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -57,8 +57,10 @@
                                     <td>20-03-2022</td>
                                     <td>
                                         <div class="btn-group btn-group-sm">
-                                            <a href="#" class="btn btn-outline-secondary" title="Details"><i class="bi bi-eye-fill"></i></a>
-                                            <a href="#" class="btn btn-outline-secondary" title="Delete"><i class="bi bi-trash3-fill"></i></a>
+                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal"
+                                                data-target="#dJob" title="Details"><i class="bi bi-briefcase-fill"></i></a>
+                                            <a href="#" class="btn btn-outline-secondary" title="Delete"><i
+                                                    class="bi bi-trash3-fill"></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -82,4 +84,5 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+    @include('backPages.detailsJob')
 @endsection

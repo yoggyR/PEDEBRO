@@ -63,8 +63,7 @@
                                     <td>10-03-2022</td>
                                     <td>
                                         <div class="btn-group btn-group-sm">
-                                            <a href="#" class="btn btn-outline-secondary" title="Details"><i
-                                                    class="bi bi-eye-fill"></i></a>
+                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#dApplicant"title="Details"><i class="bi bi-file-earmark-text-fill"></i></a>
                                             <a href="#" class="btn btn-outline-secondary" title="Accept"><i
                                                     class="bi bi-check-circle-fill"></i></i></a>
                                             <a href="#" class="btn btn-outline-secondary" title="Delete"><i
@@ -92,4 +91,5 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+    @include('backPages.detailsApplicant')
 @endsection

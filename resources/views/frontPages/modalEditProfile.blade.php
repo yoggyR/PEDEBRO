@@ -1,6 +1,6 @@
 <div class="modal fade" id="eProfile" data-bs-keyboard="false" tabindex="-1" aria-labelledby="eProfileLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="fw-bold modal-title"><img src="{{ asset('img') }}/pedebro.png" alt="" width="26" height="26"

@@ -1,6 +1,6 @@
 @extends('frontLayouts.main')
 @section('frontContent')
-    <div class=" mt-2 mb-5 bg-white">
+    <div class=" mt-4 mb-5 bg-white">
         <div class="container py-5">
             <h3 class="fw-bold text-center"><img src="{{ asset('img') }}/pedebro.png" alt="" width="38" height="38"
                     class="d-inline-block align-text-top"> PEDEBRO</h3>

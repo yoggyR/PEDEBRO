@@ -1,12 +1,13 @@
 @extends('frontLayouts.main')
 @section('frontContent')
-    <div class=" mt-2 mb-5 bg-white">
+    <div class=" mt-4 mb-5 bg-white">
         <div class="container py-5">
-            <h2 class="mb-5 fw-bold">My profile</h2>
+            <h2 class="mb-4 fw-bold">My profile</h2>
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-lg-3">
-                        <img src="{{ asset('img') }}/img.jpg" class="img-fluid" alt="..." style="border-top-left-radius: 5px;">
+                        <img src="{{ asset('img') }}/img.jpg" class="img-fluid" alt="..."
+                            style="border-top-left-radius: 5px;">
                     </div>
                     <div class="col-lg-9">
                         <div class="card-body">
@@ -36,7 +37,7 @@
                                         <div class="col-lg-6  fw-bold">CV</div>
                                         <div class="col-lg-2  text-lg-center mb-1"><i class="bi bi-check-circle "></i></div>
                                         <div class="col-lg-2  mb-4">
-                                            <a type="button" href="#" class="btn btn-outline-dark btn-sm">Check</a>
+                                            <a type="button" href="#" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#cDocument">Check</a>
                                         </div>
 
                                         <div class="col-lg-6 fw-bold">ID card</div>
@@ -70,4 +71,5 @@
         </div>
     </div>
     @include('frontPages.modalEditProfile')
+    @include('frontPages.modalCheckDocument')
 @endsection

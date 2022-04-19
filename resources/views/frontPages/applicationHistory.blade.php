@@ -1,8 +1,8 @@
 @extends('frontLayouts.main')
 @section('frontContent')
-    <div class=" mt-2 mb-5 bg-white">
+    <div class=" mt-4 mb-5 bg-white">
         <div class="container py-5">
-            <h2 class="mb-5 fw-bold">Application history</h2>
+            <h2 class="mb-4 fw-bold">Application history</h2>
             <div class="card mb-3">
                 <div class="row g-0">
                     <h6 class="fw-bold card-header">Apply date : 14-04-2022</h6>
@@ -26,7 +26,7 @@
                                     <li>Location : Prabumulih</li>
                                     <li>Uploaded : 3 mins ago</li>
                                     <li>Closing : 20-04-2022</li>
-                                    <li>Status : <span class="badge bg-success">Active</span> </li>
+                                    <li>Status : <span class="badge bg-success">Opened</span> </li>
                                 </ul>
                             </div>
                         </div>

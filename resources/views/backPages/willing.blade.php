@@ -59,8 +59,7 @@
                                     <td>24-04-2022</td>
                                     <td>
                                         <div class="btn-group btn-group-sm">
-                                            <a href="#" class="btn btn-outline-secondary" title="Details"><i
-                                                    class="bi bi-eye-fill"></i></a>
+                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#dApplicant" title="Details"><i class="bi bi-file-earmark-text-fill"></i></a>
                                                     <a href="#" class="btn btn-outline-secondary" title="Print"><i class="bi bi-printer-fill"></i></a>
                                         </div>
                                     </td>
@@ -120,8 +119,7 @@
                                     <td>24-04-2022</td>
                                     <td>
                                         <div class="btn-group btn-group-sm">
-                                            <a href="#" class="btn btn-outline-secondary" title="Details"><i
-                                                    class="bi bi-eye-fill"></i></a>
+                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#dApplicant" title="Details"><i class="bi bi-file-earmark-text-fill"></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -145,4 +143,5 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+    @include('backPages.detailsApplicant')
 @endsection

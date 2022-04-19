@@ -23,7 +23,7 @@
                 <li class="nav-item">
                     {{-- <a class="nav-link" role="button" href="/"><i class="bi bi-door-open-fill"
                             title="Sign out"></i></a> --}}
-                            <b class="nav-link"><i class="bi bi-calendar2-week-fill"></i> {{ date('d-m-Y') }}</b>
+                            <label class="nav-link"><i class="bi bi-calendar2-week-fill"></i> {{ date('d-m-Y') }}</label>
                 </li>
             </ul>
         </nav>

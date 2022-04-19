@@ -17,7 +17,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="/aProfile" class="d-block">Alexander Pierce</a>
                     </div>
                 </div>
                 <!-- Sidebar Menu -->
@@ -25,7 +25,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-item mt-3 mb-3">
-                            <a href="/" class="nav-link {{ $title === 'dashboard' ? 'active' : '' }}">
+                            <a href="/dashboard" class="nav-link {{ $title === 'dashboard' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -33,18 +33,18 @@
                             </a>
                         </li>
                         <li
-                            class="nav-item mt-3 mb-3 {{ $title === 'opened' || $title === 'closed' ? 'menu-open' : '' }}">
+                            class="nav-item mt-3 mb-3 {{ $title === 'opened' || $title === 'closed' || $title === 'nJob' || $title === 'eJob' ? 'menu-open' : '' }}">
                             <a href="#"
-                                class="nav-link {{ $title === 'opened' || $title === 'closed' ? 'active' : '' }}">
+                                class="nav-link {{ $title === 'opened' || $title === 'closed' || $title === 'nJob' || $title === 'eJob' ? 'active' : '' }}">
                                 <i class="nav-icon bi bi-briefcase-fill"></i>
                                 <p>
-                                    Job Vacancies
+                                    Job vacancies
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/opened" class="nav-link {{ $title === 'opened' ? 'active' : '' }}">
+                                    <a href="/opened" class="nav-link {{ $title === 'opened' || $title === 'nJob' || $title === 'eJob' ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Opened</p>
                                     </a>

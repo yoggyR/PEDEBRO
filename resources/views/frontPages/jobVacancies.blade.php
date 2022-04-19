@@ -1,6 +1,6 @@
 @extends('frontLayouts.main')
 @section('frontContent')
-    <div class=" mt-2 mb-5 bg-white">
+    <div class=" mt-4 mb-5 bg-white">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-3">
@@ -62,9 +62,9 @@
                                         <ul>
                                             <li>Education : D3, S1</li>
                                             <li>Location : Prabumulih</li>
-                                            <li>Uploaded : 3 mins ago</li>
-                                            <li>Closing : 20-04-2022</li>
-                                            <li>Status : <span class="badge bg-success">Active</span> </li>
+                                            <li>Date created : 18-04-2022</li>
+                                            <li>Closing date : 20-04-2022</li>
+                                            <li>Status : <span class="badge bg-success">Opened</span> </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -93,9 +93,9 @@
                                         <ul>
                                             <li>Education : SMA/SMK, D3, S1</li>
                                             <li>Location : Bandung</li>
-                                            <li>Uploaded : 5 mins ago</li>
-                                            <li>Closing : 20-04-2022</li>
-                                            <li>Status : <span class="badge bg-success">Active</span> </li>
+                                            <li>Date created : 18-04-2022o</li>
+                                            <li>Closing date : 20-04-2022</li>
+                                            <li>Status : <span class="badge bg-success">Opened</span> </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -122,9 +122,9 @@
                                         <ul>
                                             <li>Education : S1, S2</li>
                                             <li>Location : Jakarta</li>
-                                            <li>Uploaded : 8 mins ago</li>
-                                            <li>Closing : 20-04-2022</li>
-                                            <li>Status : <span class="badge bg-success">Active</span> </li>
+                                            <li>Date created : 18-04-2022</li>
+                                            <li>Closing date : 20-04-2022</li>
+                                            <li>Status : <span class="badge bg-success">Opened</span> </li>
                                         </ul>
                                     </div>
                                 </div>
