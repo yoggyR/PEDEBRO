@@ -21,9 +21,9 @@
                         <a class="nav-link {{ $title === 'about' ? 'actived' : '' }}" href="/about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a type="button" class="btn-outline-dark btn form-control" href="#" data-bs-toggle="modal"
-                            data-bs-target="#signIn">Sign in</a>
-                        {{-- <div class="dropdown mt-1">
+                        {{-- <a type="button" class="btn-outline-dark btn form-control" href="#" data-bs-toggle="modal"
+                            data-bs-target="#signIn">Sign in</a> --}}
+                        <div class="dropdown mt-1">
                             <a href="#"
                                 class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
                                 id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,7 +58,7 @@
                                     <a class="dropdown-item" href="#"><i class="bi bi-door-open-fill"></i> Sign out</a>
                                 </li>
                             </ul>
-                        </div> --}}
+                        </div>
                     </li>
                 </ul>
             </div>
