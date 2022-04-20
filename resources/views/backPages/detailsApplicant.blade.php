@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <h2 class="mb-4 text-bold">Details Applicant</h2>
+                <h2 class="mb-4 text-bold">Details applicant</h2>
                 <div class="card p-3">
                     <h4 class="text-bold mb-lg-4">Personal data</h4>
                     <div class="row g-0">

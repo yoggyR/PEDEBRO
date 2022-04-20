@@ -93,7 +93,7 @@
                                         <ul>
                                             <li>Education : SMA/SMK, D3, S1</li>
                                             <li>Location : Bandung</li>
-                                            <li>Date created : 18-04-2022o</li>
+                                            <li>Date created : 18-04-2022</li>
                                             <li>Closing date : 20-04-2022</li>
                                             <li>Status : <span class="badge bg-success">Opened</span> </li>
                                         </ul>

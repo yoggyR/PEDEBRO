@@ -24,13 +24,13 @@
                         <div class="small-box bg-secondary">
                             <div class="inner">
                                 <h3>5</h3>
-
                                 <p>Job vacancies open</p>
                             </div>
                             <div class="icon">
                                 <i class="bi bi-briefcase"></i>
                             </div>
-                            <a href="/opened" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="/opened" class="small-box-footer">More info <i
+                                    class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- ./col -->
@@ -39,17 +39,17 @@
                         <div class="small-box bg-secondary">
                             <div class="inner">
                                 <h3>53</h3>
-
                                 <p>New applicants</p>
                             </div>
                             <div class="icon">
                                 <i class="bi bi-people"></i>
                             </div>
-                            <a href="/newest" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="/newest" class="small-box-footer">More info <i
+                                    class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <!-- /.container-fluid -->
         </section>

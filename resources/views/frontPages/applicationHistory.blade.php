@@ -7,8 +7,7 @@
                 <div class="row g-0">
                     <h6 class="fw-bold card-header">Apply date : 14-04-2022</h6>
                     <div class="card-body">
-                        <a href="#" style="text-decoration: none;" data-bs-toggle="modal"
-                        data-bs-target="#job">
+                        <a href="#" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#job">
                             <h4 class="card-title">Web Developer</h4>
                         </a>
                         <h6>| Fresh graduate |</h6>
@@ -24,8 +23,8 @@
                                 <ul>
                                     <li>Education : D3, S1</li>
                                     <li>Location : Prabumulih</li>
-                                    <li>Uploaded : 3 mins ago</li>
-                                    <li>Closing : 20-04-2022</li>
+                                    <li>Date created : 18-04-2022</li>
+                                    <li>Closing date : 20-04-2022</li>
                                     <li>Status : <span class="badge bg-success">Opened</span> </li>
                                 </ul>
                             </div>

@@ -16,13 +16,13 @@ class M_EducationsSeeder extends Seeder
     public function run()
     {
         DB::table('m__educations')->insert([
-            'education_name' => 'sma/smk'
+            'education_name' => 'SMA/SMK'
         ]);
         DB::table('m__educations')->insert([
-            'education_name' => 'd3'
+            'education_name' => 'D3'
         ]);
         DB::table('m__educations')->insert([
-            'education_name' => 's1'
+            'education_name' => 'S1'
         ]);
     }
 }

@@ -16,10 +16,10 @@ class M_PositionsSeeder extends Seeder
     public function run()
     {
         DB::table('m__positions')->insert([
-            'position_name' => 'recruiter'
+            'position_name' => 'Recruiter'
         ]);
         DB::table('m__positions')->insert([
-            'position_name' => 'applicant'
+            'position_name' => 'Applicant'
         ]);
     }
 }

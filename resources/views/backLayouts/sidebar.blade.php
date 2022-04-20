@@ -58,6 +58,31 @@
                             </ul>
                         </li>
                         <li
+                            class="nav-item mt-3 mb-3 {{ $title === 'rList' || $title === 'aList' || $title === 'nRecruiter' ? 'menu-open' : '' }}">
+                            <a href="#"
+                                class="nav-link {{ $title === 'rList' || $title === 'aList' || $title === 'nRecruiter' ? 'active' : '' }}">
+                                <i class="nav-icon bi bi-person-lines-fill"></i>
+                                <p>
+                                    Users
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/rList" class="nav-link {{ $title === 'rList' || $title === 'nRecruiter' ? 'active' : '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Recruiter list</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/aList" class="nav-link {{ $title === 'aList' ? 'active' : '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Applicant list</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li
                             class="nav-item mt-3 mb-3 {{ $title === 'newest' || $title === 'accepted' || $title === 'rejected' ? 'menu-open' : '' }}">
                             <a href="#"
                                 class="nav-link {{ $title === 'newest' || $title === 'accepted' || $title === 'rejected' ? 'active' : '' }}">

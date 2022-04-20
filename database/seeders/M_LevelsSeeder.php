@@ -16,10 +16,10 @@ class M_LevelsSeeder extends Seeder
     public function run()
     {
         DB::table('m__levels')->insert([
-            'level_name' => 'fresh graduate'
+            'level_name' => 'Fresh graduate'
         ]);
         DB::table('m__levels')->insert([
-            'level_name' => 'experience'
+            'level_name' => 'Experience'
         ]);
     }
 }

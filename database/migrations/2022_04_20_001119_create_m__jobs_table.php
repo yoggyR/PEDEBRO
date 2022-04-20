@@ -24,7 +24,7 @@ return new class extends Migration
             $table->date('date_created');
             $table->date('closing_date');
             $table->text('description');
-            $table->enum('job_status', ['opened','closed']);
+            $table->enum('job_status', ['Opened','Closed']);
             $table->timestamps();
         });
     }

@@ -29,14 +29,22 @@
                     </div>
                     <div class="form-group">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <label for="Place">Place</label>
                                 <input type="text" class="form-control" id="Place" placeholder="Enter Place">
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <label for="Date of birth">Date of birth</label>
                                 <input type="date" class="form-control" id="Date of birth"
                                     placeholder="Enter Date of birth">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="Place">Gender</label>
+                                <select class="form-control">
+                                    <option>Choose</option>
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                </select>
                             </div>
                         </div>
                     </div>

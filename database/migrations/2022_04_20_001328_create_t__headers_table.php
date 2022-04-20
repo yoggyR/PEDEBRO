@@ -20,8 +20,8 @@ return new class extends Migration
             $table->unsignedBigInteger('fk_bridge_id');
             $table->foreign('fk_bridge_id')->references('pk_bridge_id')->on('bridges')->onUpdate('no action')->onDelete('no action');
             $table->date('apply_date');
-            $table->enum('applicant_status',['newest','accepted','rejected']);
-            $table->enum('interview_status',['willing','waiting','refuse']);
+            $table->enum('applicant_status',['Newest','Accepted','Rejected']);
+            $table->enum('interview_status',['Willing','Waiting','Refuse']);
             $table->timestamps();
         });
     }

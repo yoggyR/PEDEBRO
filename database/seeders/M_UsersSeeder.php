@@ -17,8 +17,8 @@ class M_UsersSeeder extends Seeder
     {
         DB::table('m__users')->insert([
             'fk_position_id'    => '1',
-            'full_name'         => 'Yoggy rachmawan',
-            'gender'            => 'male',
+            'full_name'         => 'Yoggy Rachmawan',
+            'gender'            => 'Male',
             'place'             => 'Prabumulih',
             'date_of_brith'     => '1997/01/10',
             'phone_number'      => '089624735217',

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('fk_position_id');
             $table->foreign('fk_position_id')->references('pk_position_id')->on('m__positions')->onUpdate('no action')->onDelete('no action');
             $table->string('full_name');
-            $table->enum('gender', ['male', 'female']);
+            $table->enum('gender', ['Male', 'Female']);
             $table->string('place');
             $table->date('date_of_brith');
             $table->string('phone_number')->unique();

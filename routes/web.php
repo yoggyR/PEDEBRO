@@ -59,6 +59,21 @@ Route::get('/closed', function () {
         "title" => "closed"
     ]);
 });
+Route::get('/rList', function () {
+    return view('backPages.recruiterList', [
+        "title" => "rList"
+    ]);
+});
+Route::get('/nRecruiter', function () {
+    return view('backPages.newRecruiter', [
+        "title" => "nRecruiter"
+    ]);
+});
+Route::get('/aList', function () {
+    return view('backPages.applicantlist', [
+        "title" => "aList"
+    ]);
+});
 Route::get('/newest', function () {
     return view('backPages.newest', [
         "title" => "newest",

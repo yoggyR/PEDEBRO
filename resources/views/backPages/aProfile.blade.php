@@ -33,6 +33,9 @@
                                     <div class="col-lg-4 mb-lg-2 text-bold">Place, date of birth</div>
                                     <div class="col-lg-8 mb-2">Prabumulih, 10-01-1997</div>
 
+                                    <div class="col-lg-4 mb-lg-2 text-bold">Gender</div>
+                                    <div class="col-lg-8 mb-2">Male</div>
+
                                     <div class="col-lg-4 mb-lg-2 text-bold">Phone number</div>
                                     <div class="col-lg-8 mb-2">0895801121100</div>
 
