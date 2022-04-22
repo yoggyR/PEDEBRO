@@ -1,4 +1,4 @@
-<div class="modal fade" id="dRecruiter">
+<div class="modal fade" id="dRecruiter{{ $list->pk_user_id }}">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
@@ -13,30 +13,29 @@
                 <div class="card p-3">
                     <div class="row">
                         <div class="col-lg-4">
-                            <img src="{{ asset('template') }}/dist/img/user2-160x160.jpg" class="img-fluid"
+                            <img src="{{ asset('storage/'. $list->photo) }}" class="img-fluid"
                                 alt="profile">
                         </div>
                         <div class="col-lg-8">
                             <div class="row">
                                 <div class="col-lg-4 mb-lg-2 text-bold">Full name</div>
-                                <div class="col-lg-8 mb-2">Yoggy Rachmawan</div>
+                                <div class="col-lg-8 mb-2">{{ $list->full_name }}</div>
 
                                 <div class="col-lg-4 mb-lg-2 text-bold">Place, date of birth</div>
-                                <div class="col-lg-8 mb-2">Prabumulih, 10-01-1997</div>
+                                <div class="col-lg-8 mb-2">{{ $list->place }},
+                                    {{ $list->date_of_brith->format('d-m-Y') }}</div>
 
                                 <div class="col-lg-4 mb-lg-2 text-bold">Gender</div>
-                                <div class="col-lg-8 mb-2">Male</div>
+                                <div class="col-lg-8 mb-2">{{ $list->gender }}</div>
 
                                 <div class="col-lg-4 mb-lg-2 text-bold">Phone number</div>
-                                <div class="col-lg-8 mb-2">0895801121100</div>
+                                <div class="col-lg-8 mb-2">{{ $list->phone_number }}</div>
 
                                 <div class="col-lg-4 mb-lg-2 text-bold">Email</div>
-                                <div class="col-lg-8 mb-2">yoggyrachmawan12@gmail.com</div>
+                                <div class="col-lg-8 mb-2">{{ $list->email }}</div>
 
                                 <div class="col-lg-4 mb-lg-2 text-bold">Address</div>
-                                <div class="col-lg-8 mb-2">Jl. Mekar Sari, No.105, RT/RW 003/004, Kel. Majasari,
-                                    Kec.
-                                    Prabumulih Selatan, Kota Prabumulih</div>
+                                <div class="col-lg-8 mb-2">{{ $list->address }}</div>
                             </div>
                         </div>
                     </div>

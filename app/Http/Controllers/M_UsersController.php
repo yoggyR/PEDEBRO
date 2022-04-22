@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\M_Users;
 use Illuminate\Http\Request;
 
 class M_UsersController extends Controller
@@ -11,9 +12,27 @@ class M_UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    // Profile
+    public function indexPE()
     {
-        //
+        $data = M_Users::all();
+        return view('backPages.profile', ['title' => 'profile', 'profile' => $data]);
+    }
+
+    // Recruiter list
+    public function indexRL(Request $request)
+    {
+        if ($request->has('search')) {
+            $data = M_Users::where('fk_position_id', 2)
+                ->where('full_name', 'LIKE', '%' . $request->search . '%')
+                ->orderBy('pk_user_id', 'desc')
+                ->paginate(2);
+        } else {
+            $data = M_Users::where('fk_position_id', 2)
+            ->orderBy('pk_user_id', 'desc')
+            ->paginate(2);
+        }
+        return view('backPages.recruiterList', ['title' => 'rList', 'recruiterList' => $data]);
     }
 
     /**
@@ -21,9 +40,10 @@ class M_UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    // Form add new recruiuter
+    public function createRL()
     {
-        //
+        return view('backPages.newRecruiter', ['title' => 'nRecruiter']);
     }
 
     /**
@@ -32,9 +52,29 @@ class M_UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    // Add new recruiter
+    public function storeRL(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'fk_position_id'    => 'required',
+            'full_name'         => 'required|max:200',
+            'gender'            => 'required',
+            'place'             => 'required',
+            'date_of_brith'     => 'required|date',
+            'phone_number'      => 'required|min:12|max:13',
+            'email'             => 'required',
+            'address'           => 'required',
+            'password'          => 'required',
+            'photo'             => 'required|image'
+        ]);
+
+        if ($request->hasFile('photo')) {
+            $validateData['photo'] = $request->file('photo')->store('img');
+        }
+        $validateData['password'] = bcrypt($validateData['password']);
+
+        M_Users::create($validateData);
+        return redirect()->route('ShowRecruiterList');
     }
 
     /**
@@ -77,8 +117,11 @@ class M_UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    // Delete recruiter
+    public function destroyRL($id)
     {
-        //
+        $data = M_Users::find($id);
+        $data->delete();
+        return redirect()->route('ShowRecruiterList');
     }
 }

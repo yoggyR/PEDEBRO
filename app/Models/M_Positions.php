@@ -10,8 +10,8 @@ class M_Positions extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    public function M_Users()
+    public function poUsers()
     {
-        return $this->hasMany(M_Users::class);
+        return $this->hasMany(M_Users::class,);
     }
 }

@@ -26,20 +26,23 @@
                     <div class="card-body">
                         <div class="row mb-3">
                             <div class="col-7">
-                                <a type="button" href="/nRecruiter" class="btn btn-outline-secondary"><i
-                                        class="bi bi-plus-lg"></i>
+                                <a type="button" href="{{ route('FormAddRecruiter') }}"
+                                    class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i>
                                     Add new recruiter</a>
                             </div>
                             <div class="col-5">
-                                <div class="input-group">
-                                    <input type="search" name="cari" class="form-control float-right" placeholder="Search">
-
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-default">
-                                            <i class="fas fa-search"></i>
-                                        </button>
+                                <form action="{{ route('ShowRecruiterList') }}" method="GET">
+                                    <div class="input-group">
+                                        <input type="search" name="search" class="form-control float-right"
+                                            placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-default">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
+
                             </div>
                         </div>
                         <table class="table table-bordered text-center">
@@ -53,31 +56,34 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Yoggy Rachmawan</td>
-                                    <td>yoggyrachmawan12@gmail.com</td>
-                                    <td>Male</td>
-                                    <td>
-                                        <div class="btn-group btn-group-sm">
-                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#dRecruiter" title="Details"><i class="bi bi-file-earmark-text-fill"></i></a>
-                                            <a href="#" class="btn btn-outline-secondary" title="Delete"><i
-                                                    class="bi bi-trash3-fill"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
+                                @foreach ($recruiterList as $index => $list)
+                                    <tr>
+                                        <td>{{ $index + $recruiterList->firstItem() }}</td>
+                                        <td>{{ $list->full_name }}</td>
+                                        <td>{{ $list->email }}</td>
+                                        <td>{{ $list->gender }}</td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-secondary" data-toggle="modal"
+                                                    data-target="#dRecruiter{{ $list->pk_user_id }}" title="Details"><i
+                                                        class="bi bi-file-earmark-text-fill"></i></a>
+                                                <a href="#" data-id="{{ $list->pk_user_id }}" data-name="{{ $list->full_name }}"
+                                                    class="btn btn-outline-secondary delete" title="Delete"><i
+                                                        class="bi bi-trash3-fill"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {{-- {{ route('deleteRecruiter', ['id' => $list->pk_user_id]) }} --}}
+                                    @include('backPages.detailsRecruiter')
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer clearfix">
-                        <ul class="pagination pagination-sm m-0 float-right">
-                            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                        </ul>
+                        <div style="float: right;">
+                            {{ $recruiterList->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,5 +92,4 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    @include('backPages.detailsRecruiter')
 @endsection

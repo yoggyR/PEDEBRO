@@ -16,16 +16,15 @@ class M_UsersSeeder extends Seeder
     public function run()
     {
         DB::table('m__users')->insert([
-            'fk_position_id'    => '1',
-            'full_name'         => 'Yoggy Rachmawan',
+            'fk_position_id'    => '2',
+            'full_name'         => 'Rachmawan',
             'gender'            => 'Male',
             'place'             => 'Prabumulih',
             'date_of_brith'     => '1997/01/10',
-            'phone_number'      => '089624735217',
-            'email'             => 'yoggyrachmawan12@gmail.com',
+            'phone_number'      => '089623435217',
+            'email'             => 'rachmawan12@gmail.com',
             'address'           => 'Jl. Mekar Sari, No.105, RT/RW 003/004, Kel. Majasari, Kec. Prabumulih Selatan, Kota Prabumulih',
-            'password'          => bcrypt('recruiter'),
-            'photo'             =>'fotoYoggy.jpg'
+            'password'          => bcrypt('recruiter')
         ]);
     }
 }

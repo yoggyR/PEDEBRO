@@ -51,12 +51,47 @@
 <script src="{{ asset('template') }}/dist/js/pages/dashboard.js"></script>
 <!-- select2 -->
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<!-- jqueryUI -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<!-- sweetalert2 -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
     $(document).ready(function() {
         $('.js-example-basic-multiple').select2({
             placeholder: "Choose",
             allowClear: true
         });
+    });
+    $(".picker").datepicker({
+        changeYear: true,
+        changeMonth: true,
+        maxDate: new Date,
+        dateFormat: 'dd-mm-yy'
+    });
+    $('.delete').click(function() {
+        var user_id = $(this).attr('data-id');
+        var user_name = $(this).attr('data-name');
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You will delete " + user_name + "",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+            
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location = "/DeleteRecruiter/" + user_id + ""
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+        })
     });
 </script>
 </body>

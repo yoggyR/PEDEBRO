@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\M_UsersController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -33,7 +34,7 @@ Route::get('/changePassword', function () {
     ]);
 });
 
-
+// back
 Route::get('/dashboard', function () {
     return view('backPages.dashboard', [
         "title" => "dashboard"
@@ -59,11 +60,26 @@ Route::get('/closed', function () {
         "title" => "closed"
     ]);
 });
-Route::get('/rList', function () {
-    return view('backPages.recruiterList', [
-        "title" => "rList"
-    ]);
-});
+
+
+// Recruiter list
+Route::get('/RecruiterList', [M_UsersController::class, 'indexRL'])->name('ShowRecruiterList');
+// Add new recruiter
+Route::get('/AddNewRecruiter', [M_UsersController::class, 'createRL'])->name('FormAddRecruiter');
+Route::post('/AddRecruiter', [M_UsersController::class, 'storeRL'])->name('AddRecruiter');
+// Delete recruiter
+Route::get('/DeleteRecruiter/{id}', [M_UsersController::class, 'destroyRL'])->name('deleteRecruiter');
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/nRecruiter', function () {
     return view('backPages.newRecruiter', [
         "title" => "nRecruiter"
@@ -105,8 +121,4 @@ Route::get('/refuse', function () {
         "title" => "refuse"
     ]);
 });
-Route::get('/aProfile', function () {
-    return view('backPages.aProfile', [
-        "title" => "aProfile"
-    ]);
-});
+Route::get('/Profile', [M_UsersController::class, 'indexProfile'])->name('profile');

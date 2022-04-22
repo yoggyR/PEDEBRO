@@ -17,7 +17,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="/aProfile" class="d-block">Alexander Pierce</a>
+                        <a href="{{ route('profile') }}" class="d-block">Alexander Pierce</a>
                     </div>
                 </div>
                 <!-- Sidebar Menu -->
@@ -44,7 +44,8 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/opened" class="nav-link {{ $title === 'opened' || $title === 'nJob' || $title === 'eJob' ? 'active' : '' }}">
+                                    <a href="/opened"
+                                        class="nav-link {{ $title === 'opened' || $title === 'nJob' || $title === 'eJob' ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Opened</p>
                                     </a>
@@ -69,7 +70,8 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/rList" class="nav-link {{ $title === 'rList' || $title === 'nRecruiter' ? 'active' : '' }}">
+                                    <a href="{{ route('ShowRecruiterList') }}"
+                                        class="nav-link {{ $title === 'rList' || $title === 'nRecruiter' ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Recruiter list</p>
                                     </a>

@@ -26,33 +26,35 @@
                                     alt="profile">
                             </div>
                             <div class="col-lg-6 ">
+                                @foreach ($profile as $person)
+                                @endforeach
                                 <div class="row">
                                     <div class="col-lg-4 mb-lg-2 text-bold">Full name</div>
-                                    <div class="col-lg-8 mb-2">Yoggy Rachmawan</div>
+                                    <div class="col-lg-8 mb-2">{{ $person->full_name }}</div>
 
                                     <div class="col-lg-4 mb-lg-2 text-bold">Place, date of birth</div>
-                                    <div class="col-lg-8 mb-2">Prabumulih, 10-01-1997</div>
+                                    <div class="col-lg-8 mb-2">{{ $person->place }},
+                                        {{ $person->date_of_brith->format('d-m-Y') }}
+                                    </div>
 
                                     <div class="col-lg-4 mb-lg-2 text-bold">Gender</div>
-                                    <div class="col-lg-8 mb-2">Male</div>
+                                    <div class="col-lg-8 mb-2">{{ $person->gender }}</div>
 
                                     <div class="col-lg-4 mb-lg-2 text-bold">Phone number</div>
-                                    <div class="col-lg-8 mb-2">0895801121100</div>
+                                    <div class="col-lg-8 mb-2">{{ $person->phone_number }}</div>
 
                                     <div class="col-lg-4 mb-lg-2 text-bold">Email</div>
-                                    <div class="col-lg-8 mb-2">yoggyrachmawan12@gmail.com</div>
+                                    <div class="col-lg-8 mb-2">{{ $person->email }}</div>
 
                                     <div class="col-lg-4 mb-lg-2 text-bold">Address</div>
-                                    <div class="col-lg-8 mb-2">Jl. Mekar Sari, No.105, RT/RW 003/004, Kel. Majasari,
-                                        Kec.
-                                        Prabumulih Selatan, Kota Prabumulih</div>
+                                    <div class="col-lg-8 mb-2">{{ $person->address }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer text-muted">
-                        <a type="button" href="#" class="btn btn-outline-dark" data-toggle="modal"
-                            data-target="#eProfile" style="float: right">Edit profile</a>
+                        <a type="button" href="#" class="btn btn-outline-dark" data-toggle="modal" data-target="#eProfile"
+                            style="float: right">Edit profile</a>
                     </div>
                 </div>
                 <h3 class="mt-5 mb-4">Change password</h3>

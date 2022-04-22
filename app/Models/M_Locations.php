@@ -10,7 +10,7 @@ class M_Locations extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    public function Bridges()
+    public function loBridges()
     {
         return $this->hasMany(Bridges::class);
     }

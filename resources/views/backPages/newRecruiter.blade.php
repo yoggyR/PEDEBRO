@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/rList">Recruiter list</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('ShowRecruiterList') }}">Recruiter list</a></li>
                             <li class="breadcrumb-item active">Add new recruiter</li>
                         </ol>
                     </div><!-- /.col -->
@@ -24,71 +24,111 @@
         <section class="content">
             <!-- container-fluid -->
             <div class="container-fluid">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title text-bold">Add new recruiter</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="exampleInputFile">Photo</label>
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="exampleInputFile">
-                                    <label class="custom-file-label" for="exampleInputFile">Choose photo</label>
-                                </div>
-                                <div class="input-group-append">
-                                    <span class="input-group-text">Upload</span>
+                <form action="{{ route('AddRecruiter') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title text-bold">Add new recruiter</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <input type="hidden" value="1" name="fk_position_id">
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Photo</label>
+                                <input type="file" name="photo"
+                                    class="form-control-file @error('photo') is-invalid @enderror"
+                                    id="exampleFormControlFile1">
+                                @error('photo')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="Full name">Full name</label>
+                                <input type="text" class="form-control @error('full_name') is-invalid @enderror"
+                                    id="Full name" name="full_name" placeholder="Enter full name"
+                                    value="{{ old('full_name') }}">
+                                @error('full_name')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label for="Place">Place</label>
+                                        <input type="text" class="form-control @error('place') is-invalid @enderror"
+                                            id="Place" name="place" placeholder="Enter Place" value="{{ old('place') }}">
+                                        @error('place')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="Date of birth">Date of birth</label>
+                                        <input type="text" class="form-control picker @error('date_of_brith') is-invalid @enderror"
+                                            id="Date of birth" name="date_of_brith" placeholder="Enter Date of birth"
+                                            value="{{ old('date_of_brith') }}">
+                                        @error('date_of_brith')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="Place">Gender</label>
+                                        <select class="form-control @error('gender') is-invalid @enderror" name="gender">
+                                            <option value="">Choose</option>
+                                            <option value="Male" {{ old('gender') == 'Male' ? 'selected' : '' }}>
+                                                Male
+                                            </option>
+                                            <option value="Female" {{ old('gender') == 'Female' ? 'selected' : '' }}>
+                                                Female
+                                            </option>
+                                        </select>
+                                        @error('gender')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Full name">Full name</label>
-                            <input type="text" class="form-control" id="Full name" placeholder="Enter full name">
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <label for="Place">Place</label>
-                                    <input type="text" class="form-control" id="Place" placeholder="Enter Place">
-                                </div>
-                                <div class="col-lg-4">
-                                    <label for="Date of birth">Date of birth</label>
-                                    <input type="date" class="form-control" id="Date of birth"
-                                        placeholder="Enter Date of birth">
-                                </div>
-                                <div class="col-lg-4">
-                                    <label for="Place">Gender</label>
-                                    <select class="form-control">
-                                        <option>Choose</option>
-                                        <option value="">Male</option>
-                                        <option value="">Female</option>
-                                    </select>
-                                </div>
+                            <div class="form-group">
+                                <label for="Phone number">Phone number</label>
+                                <input type="text" class="form-control @error('phone_number') is-invalid @enderror"
+                                    id="Phone number" name="phone_number" placeholder="Enter Phone number"
+                                    value="{{ old('phone_number') }}">
+                                @error('phone_number')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" id="Email"
+                                    name="email" placeholder="Enter Email" value="{{ old('email') }}">
+                                @error('email')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <input type="password" class="form-control @error('password') is-invalid @enderror"
+                                    id="Password" name="password" placeholder="Enter Password">
+                                @error('password')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea class="form-control @error('address') is-invalid @enderror" name="address" rows="3"
+                                    placeholder="Enter ...">{{ old('address') }}</textarea>
+                                @error('address')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                         </div>
-                        <div class="form-group">
-                            <label for="Phone number">Phone number</label>
-                            <input type="text" class="form-control" id="Phone number" placeholder="Enter Phone number">
-                        </div>
-                        <div class="form-group">
-                            <label for="Email">Email</label>
-                            <input type="email" class="form-control" id="Email" placeholder="Enter Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="Password">Password</label>
-                            <input type="password" class="form-control" id="Password" placeholder="Enter Password">
-                        </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                        <!-- /.card-body -->
+                        <div class="card-footer clearfix">
+                            <button type="submit" class="btn btn-outline-dark" style="float: right;">Save</button>
                         </div>
                     </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer clearfix">
-                        <button type="button" class="btn btn-outline-dark" style="float: right;">Save</button>
-                    </div>
-                </div>
+                </form>
             </div>
             <!-- /.container-fluid -->
         </section>

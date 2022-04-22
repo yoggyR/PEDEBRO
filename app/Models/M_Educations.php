@@ -10,7 +10,7 @@ class M_Educations extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    public function Bridges()
+    public function edBridges()
     {
         return $this->hasMany(Bridges::class);
     }

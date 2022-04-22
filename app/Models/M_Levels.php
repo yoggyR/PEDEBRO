@@ -10,7 +10,7 @@ class M_Levels extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    public function M_Jobs()
+    public function leJobs()
     {
         return $this->hasMany(M_Jobs::class);
     }
