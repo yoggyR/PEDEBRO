@@ -1,9 +1,7 @@
 <?php
 
 use App\Http\Controllers\M_JobsController;
-use App\Http\Controllers\M_LevelsController;
 use App\Http\Controllers\M_UsersController;
-use App\Models\M_Educations;
 use Illuminate\Support\Facades\Route;
 
 // FRONT
