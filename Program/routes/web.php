@@ -71,7 +71,7 @@ Route::post('/AddJobVacancies', [M_JobsController::class, 'storeJV'])->name('Cre
 // (READ)
 Route::get('/JobVacancies', [M_JobsController::class, 'indexJV'])->name('Read_JobVacancies');
 // (UPDATE)
-
+Route::get('/EditJobVacancies/{id}', [M_JobsController::class, 'editJV'])->name('FormUpdate_JobVacancies');
 // (DELETE)
 
 // ----------------------------------

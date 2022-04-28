@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/opened">Opened</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('Read_JobVacancies') }}">Opened</a></li>
                             <li class="breadcrumb-item active">Edit job vacancies</li>
                         </ol>
                     </div><!-- /.col -->
@@ -34,26 +34,28 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="job name">Job name</label>
-                                    <input type="text" class="form-control" id="job name" placeholder="Enter job name">
+                                    <input type="text" class="form-control" id="job name" placeholder="Enter job name"
+                                        value="{{ $jobs->job_name }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="max age">Max age</label>
-                                    <input type="text" class="form-control" id="max age" placeholder="Enter max age">
+                                    <input type="text" class="form-control" id="max age" placeholder="Enter max age"
+                                        value="{{ $jobs->max_age }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="hard skill">Hard skill</label>
-                                    <input type="text" class="form-control" id="hard skill"
-                                        placeholder="Enter hard skill">
+                                    <input type="text" class="form-control" id="hard skill" placeholder="Enter hard skill"
+                                        value="{{ $jobs->hard_skill }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="soft skill">Soft skill</label>
                                     <input type="text" class="form-control" id="soft skill"
-                                        placeholder="Enter soft skill">
+                                        placeholder="Enter soft skill" value="{{ $jobs->soft_skill }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="job name">Date created</label>
                                     <input type="text" class="form-control" id="job name" placeholder="Enter job name"
-                                        value="{{ date('d-m-Y') }}" readonly>
+                                        value="{{ $jobs->date_created->format('d-m-Y') }}" readonly>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -61,39 +63,38 @@
                                     <label>Level</label>
                                     <select class="form-control js-example-basic-multiple" data-width="100%" name="level[]"
                                         multiple="multiple">
-                                        <option value="AL">All</option>
-                                        <option value="Fresh graduate">Fresh graduate</option>
-                                        <option value="Experience">Experience</option>
+                                        @foreach ($levels as $level)
+                                            <option value="{{ $level->pk_level_id }}">{{ $level->level_name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Education</label>
                                     <select class="form-control js-example-basic-multiple" data-width="100%"
                                         name="education[]" multiple="multiple">
-                                        <option value="all education">All</option>
-                                        <option value="sma/smk">SMA/SMK</option>
-                                        <option value="d3">D3</option>
-                                        <option value="d3">S1</option>
-                                        <option value="d3">S2</option>
+                                        @foreach ($educations as $education)
+                                            <option value="{{ $education->pk_education_id }}">
+                                                {{ $education->education_name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Location</label>
                                     <select class="form-control js-example-basic-multiple" data-width="100%"
                                         name="location[]" multiple="multiple">
-                                        <option value="all location">All</option>
-                                        <option value="prabumulih">Prabumulih</option>
-                                        <option value="jakarta">Jakarta</option>
-                                        <option value="lampung">Lampung</option>
+                                        @foreach ($locations as $location)
+                                            <option value="{{ $location->pk_location_id }}">
+                                                {{ $location->location_name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="job name">Closing date</label>
-                                    <input type="date" class="form-control" id="job name" placeholder="Enter job name">
+                                    <label for="closing date">Closing date</label>
+                                    <input type="text" class="form-control picker" id="closing date" placeholder="Enter closing date" value="{{ $jobs->closing_date->format('d-m-Y') }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                                    <textarea class="form-control" rows="3" placeholder="Enter ...">{{ $jobs->description }}</textarea>
                                 </div>
                             </div>
                         </div>

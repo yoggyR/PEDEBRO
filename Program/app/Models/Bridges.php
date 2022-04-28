@@ -20,18 +20,18 @@ class Bridges extends Model
 
     public function brJobs()
     {
-        return $this->belongsToMany(M_Jobs::class);
+        return $this->belongsTo(M_Jobs::class, 'fk_job_id', 'pk_job_id');
     }
     public function brLevels()
     {
-        return $this->belongsToMany(M_Levels::class);
+        return $this->belongsTo(M_Levels::class, 'fk_level_id', 'pk_level_id');
     }
     public function brEducations()
     {
-        return $this->belongsToMany(M_Educations::class);
+        return $this->belongsTo(M_Educations::class, 'fk_education_id', 'pk_education_id');
     }
     public function brLocations()
     {
-        return $this->belongsToMany(M_Locations::class);
+        return $this->belongsTo(M_Locations::class, 'fk_location_id', 'pk_location_id');
     }
 }

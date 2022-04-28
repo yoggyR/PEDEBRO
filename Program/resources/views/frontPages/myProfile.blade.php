@@ -6,7 +6,7 @@
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-lg-3">
-                        <img src="{{ asset('img') }}/FotoYoggy.jpg" class="img-fluid" alt="..."
+                        <img src="{{ asset('img') }}/foto_red_yoggy.jpg" class="img-fluid" alt="..."
                             style="border-top-left-radius: 5px;">
                     </div>
                     <div class="col-lg-9">

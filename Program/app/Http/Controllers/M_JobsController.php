@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bridges;
+use App\Models\M_Jobs;
 use App\Models\M_Levels;
 use App\Models\M_Locations;
 use App\Models\M_Educations;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\M_Jobs;
+
 
 class M_JobsController extends Controller
 {
@@ -18,7 +20,8 @@ class M_JobsController extends Controller
      */
     public function indexJV()
     {
-        return view('backPages.opened', ['title' => 'opened']);
+        $jobs = M_Jobs::all();
+        return view('backPages.opened', ['title' => 'opened', 'jobs' => $jobs]);
     }
 
     /**
@@ -47,7 +50,39 @@ class M_JobsController extends Controller
      */
     public function storeJV(Request $request)
     {
-        M_Jobs::create($request->all());
+        $validateData = $request->validate([
+            'job_name'      => 'required',
+            'max_age'       => 'required|integer',
+            'hard_skill'    => 'required',
+            'soft_skill'    => 'required',
+            'date_created'  => 'required|date',
+            'closing_date'  => 'required|date',
+            'description'   => 'required',
+            'job_status'    => 'required',
+        ]);
+        $job = M_Jobs::insertGetId($validateData);
+
+        foreach ($request->input(['pk_level_id']) as $level) {
+            Bridges::create([
+                'fk_job_id'     => $job,
+                'fk_level_id'   => $level
+            ]);
+        }
+
+        foreach ($request->input(['pk_education_id']) as $education) {
+            Bridges::create([
+                'fk_job_id'         => $job,
+                'fk_education_id'   => $education
+            ]);
+        }
+
+        foreach ($request->input(['pk_location_id']) as $location) {
+            Bridges::create([
+                'fk_job_id'        => $job,
+                'fk_location_id'   => $location
+            ]);
+        }
+
         return redirect()->route('Read_JobVacancies');
     }
 
@@ -57,7 +92,7 @@ class M_JobsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showJV($id)
     {
         //
     }
@@ -68,9 +103,20 @@ class M_JobsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editJV($id)
     {
-        //
+        $jobs       = M_Jobs::find($id);
+        $levels     = M_Levels::all();
+        $educations = M_Educations::all();
+        $locations  = M_Locations::all();
+
+        return view('backPages.editJob', [
+            'title'         => 'eJob',
+            'jobs'          => $jobs,
+            'levels'        => $levels,
+            'educations'    => $educations,
+            'locations'     => $locations
+        ]);
     }
 
     /**

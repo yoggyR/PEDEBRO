@@ -27,7 +27,7 @@
                             <a href="#"
                                 class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
                                 id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ asset('img') }}/FotoYoggy.jpg" alt="" width="32" height="32"
+                                <img src="{{ asset('img') }}/foto_red_yoggy.jpg" alt="" width="32" height="32"
                                     class="rounded-circle me-2">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end text-small shadow"
@@ -40,15 +40,18 @@
                                 </li>
                                 <li>
 
-                                    <a class="dropdown-item {{ $title === 'myProfile' ? 'activedUser' : '' }}" href="/myProfile"><i class="bi bi-person-lines-fill"></i> My
+                                    <a class="dropdown-item {{ $title === 'myProfile' ? 'activedUser' : '' }}"
+                                        href="/myProfile"><i class="bi bi-person-lines-fill"></i> My
                                         profile</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item {{ $title === 'applicationHistory' ? 'activedUser' : '' }}" href="/applicationHistory"><i class="bi bi-file-text-fill"></i>
+                                    <a class="dropdown-item {{ $title === 'applicationHistory' ? 'activedUser' : '' }}"
+                                        href="/applicationHistory"><i class="bi bi-file-text-fill"></i>
                                         Application history</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item {{ $title === 'changePassword' ? 'activedUser' : '' }}" href="/changePassword"><i class="bi bi-exclamation-circle-fill"></i>
+                                    <a class="dropdown-item {{ $title === 'changePassword' ? 'activedUser' : '' }}"
+                                        href="/changePassword"><i class="bi bi-exclamation-circle-fill"></i>
                                         Change password</a>
                                 </li>
                                 <li>

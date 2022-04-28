@@ -53,38 +53,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Web Developer</td>
-                                    <td>18-04-2022</td>
-                                    <td>28-04-2022</td>
-                                    <td>
-                                        <div class="btn-group btn-group-sm">
-                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal"
-                                                data-target="#dJob" title="Details"><i class="bi bi-briefcase-fill"></i></a>
-                                            <a href="/eJob" class="btn btn-outline-secondary" title="Edit"><i
-                                                    class="bi bi-pen-fill"></i></a>
-                                            <a href="#" class="btn btn-outline-secondary" title="Delete"><i
-                                                    class="bi bi-trash3-fill"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Administration</td>
-                                    <td>18-04-2022</td>
-                                    <td>28-04-2022</td>
-                                    <td>
-                                        <div class="btn-group btn-group-sm">
-                                            <a href="#" class="btn btn-outline-secondary" data-toggle="modal"
-                                                data-target="#dJob" title="Details"><i class="bi bi-briefcase-fill"></i></a>
-                                            <a href="/eJob" class="btn btn-outline-secondary" title="Edit"><i
-                                                    class="bi bi-pen-fill"></i></a>
-                                            <a href="#" class="btn btn-outline-secondary" title="Delete"><i
-                                                    class="bi bi-trash3-fill"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
+                                @foreach ($jobs as $job)
+                                    <tr>
+                                        <td>1</td>
+                                        <td>{{ $job->job_name }}</td>
+                                        <td>{{ $job->date_created->format('d-m-Y') }}</td>
+                                        <td>{{ $job->closing_date->format('d-m-Y') }}</td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-secondary" data-toggle="modal"
+                                                    data-target="#dJob" title="Details"><i
+                                                        class="bi bi-briefcase-fill"></i></a>
+                                                <a href="{{ route('FormUpdate_JobVacancies', ['id' => $job->pk_job_id]) }}"
+                                                    class="btn btn-outline-secondary" title="Edit"><i
+                                                        class="bi bi-pen-fill"></i></a>
+                                                <a href="#" class="btn btn-outline-secondary" title="Delete"><i
+                                                        class="bi bi-trash3-fill"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

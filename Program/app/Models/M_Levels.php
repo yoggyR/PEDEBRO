@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class M_Levels extends Model
 {
     use HasFactory;
+    protected $table        = 'm__levels';
+    protected $primaryKey   = 'pk_level_id';
     protected $guarded = [];
     public function leBridges()
     {

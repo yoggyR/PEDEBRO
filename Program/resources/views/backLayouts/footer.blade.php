@@ -66,7 +66,6 @@
     $(".picker").datepicker({
         changeYear: true,
         changeMonth: true,
-        maxDate: new Date,
         dateFormat: 'yy-mm-dd'
     });
     $('.delete').click(function() {
