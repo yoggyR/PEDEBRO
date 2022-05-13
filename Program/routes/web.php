@@ -70,6 +70,7 @@ Route::get('/AddNewJobVacancies', [M_JobsController::class, 'createJV'])->name('
 Route::post('/AddJobVacancies', [M_JobsController::class, 'storeJV'])->name('Create_JobVacancies');
 // (READ)
 Route::get('/JobVacancies', [M_JobsController::class, 'indexJV'])->name('Read_JobVacancies');
+Route::get('/DetailsJobVacancies/{id}', [M_JobsController::class, 'showJV'])->name('Show_JobVacancies');
 // (UPDATE)
 Route::get('/EditJobVacancies/{id}', [M_JobsController::class, 'editJV'])->name('FormUpdate_JobVacancies');
 // (DELETE)

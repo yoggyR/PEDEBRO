@@ -27,6 +27,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title text-bold">Edit job vacancies</h3>
+
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -49,8 +50,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="soft skill">Soft skill</label>
-                                    <input type="text" class="form-control" id="soft skill"
-                                        placeholder="Enter soft skill" value="{{ $jobs->soft_skill }}">
+                                    <input type="text" class="form-control" id="soft skill" placeholder="Enter soft skill"
+                                        value="{{ $jobs->soft_skill }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="job name">Date created</label>
@@ -64,7 +65,9 @@
                                     <select class="form-control js-example-basic-multiple" data-width="100%" name="level[]"
                                         multiple="multiple">
                                         @foreach ($levels as $level)
-                                            <option value="{{ $level->pk_level_id }}">{{ $level->level_name }}</option>
+                                            <option value="{{ $level->pk_level_id }}" selected>
+                                                {{ $level->level_name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -90,7 +93,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="closing date">Closing date</label>
-                                    <input type="text" class="form-control picker" id="closing date" placeholder="Enter closing date" value="{{ $jobs->closing_date->format('d-m-Y') }}">
+                                    <input type="text" class="form-control picker" id="closing date"
+                                        placeholder="Enter closing date"
+                                        value="{{ $jobs->closing_date->format('d-m-Y') }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Description</label>

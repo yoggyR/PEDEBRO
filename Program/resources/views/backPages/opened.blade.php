@@ -53,16 +53,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($jobs as $job)
+                                @foreach ($jobs as $index => $job)
                                     <tr>
-                                        <td>1</td>
+                                        <td>{{ $index + $jobs->firstItem() }}</td>
                                         <td>{{ $job->job_name }}</td>
                                         <td>{{ $job->date_created->format('d-m-Y') }}</td>
                                         <td>{{ $job->closing_date->format('d-m-Y') }}</td>
                                         <td>
                                             <div class="btn-group btn-group-sm">
-                                                <a href="#" class="btn btn-outline-secondary" data-toggle="modal"
-                                                    data-target="#dJob" title="Details"><i
+                                                <a href="{{ route('Show_JobVacancies', ['id' => $job->pk_job_id]) }}"
+                                                    class="btn btn-outline-secondary" title="Details"><i
                                                         class="bi bi-briefcase-fill"></i></a>
                                                 <a href="{{ route('FormUpdate_JobVacancies', ['id' => $job->pk_job_id]) }}"
                                                     class="btn btn-outline-secondary" title="Edit"><i
@@ -78,6 +78,9 @@
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer clearfix">
+                        <div style="float: right;">
+                            {{ $jobs->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,5 +89,4 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    @include('backPages.detailsJob')
 @endsection

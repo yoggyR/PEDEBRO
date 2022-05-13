@@ -24,7 +24,7 @@
         <section class="content">
             <!-- container-fluid -->
             <div class="container-fluid">
-                <form action="{{ route('Create_JobVacancies') }}" method="POST">
+                <form action="{{ route('store') }}" method="POST">
                     @csrf
                     <input type="hidden" value="Opened" name="job_status">
                     <div class="card">
